@@ -1,0 +1,52 @@
+{% extends 'layouts.html' %}
+
+{% block contents %}
+<style>
+.search_button{
+        background-color:transparent;
+        border-color:white;
+        width:100px;
+        height:60px;
+        border-radius:10px;
+        color:black;
+        margin-left:20px;
+        
+}
+button:hover{
+    background-color:rgb(41 202 142);
+    color:white;
+}
+button:focus{
+    outline:none;
+}
+.management_table{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+li{
+    list-style:none;
+}
+</style>
+
+    <div class = "management_table" style="margin-top:80px;">
+        <div>
+            <p style='font-size:35px;'>Book Management</p>
+        </div>
+        <div>            
+            <p style='font-size:20px;padding-top:30px;'>Book Borrow & Return&nbsp&nbsp-> <button class='search_button' id = 'form-submit' onclick = "location.href = '/bookborroworreturn' ">Go!</button></p>
+            <p style='font-size:20px;padding-top:10px;padding-left:60px'>Book Write <span style = 'padding-left:45px'>-></span> <button class='search_button' id = 'form-submit' onclick = "location.href = '/bookwrite' ">Go!</button></p>
+            <p style='font-size:20px;padding-top:10px;padding-left:55px'>Book Delete <span style = 'padding-left:40px'>-></span> <button class='search_button' id = 'form-submit' onclick = "location.href = '/bookdelete' ">Go!</button></p>
+        </div>        
+    </div>
+    
+    <div class = "management_table" style="padding-top:60px;">
+        <div>
+            <p style='font-size:35px;'>Go to User management</p>
+        </div>
+        <div>
+            <p style='font-size:20px;padding-top:30px;padding-left:55px'>User Delete <span style = 'padding-left:40px'>-></span> <button class='search_button' id = 'form-submit' onclick = "location.href = '/userdelete' ">Go!</button></p>
+        </div>  
+    </div>
+        
+{% endblock %}

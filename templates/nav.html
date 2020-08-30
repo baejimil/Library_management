@@ -1,0 +1,84 @@
+<section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <a href="/">
+                         <img src = "../static/images/vivans_eye.png" style="margin-left:-50px;padding-bottom:10px">
+                              <span style="display:inline-block;font-size:25px;padding-top:18px">VIVA</span><span style="font-size:25px;padding-left:-30px;color:#6977f6">NS</span> 
+                              <span style="font-size:25px">Library</span>
+                    </a>          
+               </div>
+               
+               {% if session['admin'] %}
+                    <div class="collapse navbar-collapse">
+                         <ul class="nav navbar-nav navbar-nav-first">
+                              <li><a href="/" class="smoothScroll">Home</a></li>
+                              <li><a href="/introduce" class="smoothScroll">Introduce</a></li>
+                              <li><a href="/search" class="smoothScroll">Book search</a></li>
+                              <li><a href="/management" class="smoothScroll">Management</a></li>
+                              <!-- <li><a href="#testimonial" class="smoothScroll"></a></li>
+                              <li><a href="#contact" class="smoothScroll">Contact</a></li> -->
+                         </ul>
+                    
+                         <ul class="nav navbar-nav navbar-right">
+                              <li style="padding-top:21px;font-size:18px;">Welcome {{session['username']}} </li>
+                              <li style="padding-left:30px"><a href="/logout">LogOut</a></li>
+
+                         </ul>
+                    </div>
+
+               {% elif session['is_logged'] %}
+                    <!-- MENU LINKS -->
+                    <div class="collapse navbar-collapse">
+                         <ul class="nav navbar-nav navbar-nav-first">
+                              <li><a href="/" class="smoothScroll">Home</a></li>
+                              <li><a href="/introduce" class="smoothScroll">Introduce</a></li>
+                              <li><a href="/search" class="smoothScroll">Book search</a></li>
+                              <li><a href="/mybooklist" class="smoothScroll">My book list</a></li>
+                              <!-- <li><a href="#testimonial" class="smoothScroll"></a></li>
+                              <li><a href="#contact" class="smoothScroll">Contact</a></li> -->
+                         </ul>
+                    
+                         <ul class="nav navbar-nav navbar-right">
+                              <li style="padding-top:21px;font-size:18px;">Welcome {{session['username']}} </li>
+                              <li style="padding-left:30px"><a href="/logout">LogOut</a></li>
+
+                         </ul>
+                    </div>
+
+               {% else %}
+                    <!-- MENU LINKS -->
+                    <div class="collapse navbar-collapse">
+                         <ul class="nav navbar-nav navbar-nav-first">
+                              <li><a href="/" class="smoothScroll">Home</a></li>
+                              <li><a href="/introduce" class="smoothScroll">Introduce</a></li>
+                              <li><a href="/search" class="smoothScroll">Book search</a></li>
+                         </ul>
+                    
+                         <ul class="nav navbar-nav navbar-right">
+                              <li><a href="/login">Login</a></li>
+                              <li><a href="/register">Register</a></li>
+
+                         </ul>
+                    </div>
+               {% endif %}
+
+          </div>
+     </section>
+     

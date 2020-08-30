@@ -1,0 +1,72 @@
+{% extends 'layouts.html' %}
+{% block contents %}
+<style>
+    .booknamebar{
+        border:solid rgba(44, 44, 44, 0.308) 2px;
+        border-radius:9px;
+        width:320px;
+        height:60px;
+        text-align:center;
+        color:black;
+        padding:10px;
+        margin-top:20px;
+        font-size:20px;      
+    }
+
+    .bookcodebar{
+        border:solid rgba(44, 44, 44, 0.308) 2px;
+        border-radius:9px;
+        width:320px;
+        height:60px;
+        text-align:center;
+        color:black;
+        padding:10px;
+        margin-top:20px;
+        font-size:20px;      
+    }
+
+
+    input:hover{
+        background-color:rgba(44, 44, 44, 0.308);
+    }
+    input:focus::-webkit-input-placeholder{
+        color:transparent;
+           
+    }
+    input:focus{
+        outline:none;
+    }
+    .insert_button{
+        background-color:transparent;
+        border-color:white;
+        width:300px;
+        height:50px;
+        border-radius:10px;
+        color:black;
+        margin-top:100px;
+        position:absolute;
+        left:50%;
+        margin-left:-142px;
+    
+    }
+    button:hover{
+        background-color:rgb(41 202 142);
+        color:white;
+    }
+    button:focus{
+        outline:none;
+    }
+   
+</style>
+<section>
+    <form action="/booksdeleting" method = 'POST'>
+        <div style = "padding:50px 0px 0px 530px;font-size:28px">   
+            Input Book code
+            <input type ="text" class = 'bookcodebar' name='bookdeletecode' placeholder="Input Code" style="margin-left:59px">
+        </div>
+        <div>
+            <button class='insert_button' id = 'form-submit' onclick = "location.href = '/bookdelete' ">Delete</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

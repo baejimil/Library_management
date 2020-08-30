@@ -1,0 +1,26 @@
+{% extends "layouts.html" %}
+{% block contents %}
+<section id="about" style="background-image:url(../static/images/library_3.jpg)">
+    <div class="container">
+         <div class="row">
+
+
+              <div class="col-md-offset-4 col-md-6 col-sm-12">
+                   <div class="entry-form">
+                        <form action="/login" method="POST">
+                             <h2>Login</h2>
+                             <input type="text" name="username" class="form-control" placeholder="Your username" required="">
+
+                             <input type="password" name="password" class="form-control" placeholder="Your password" required="">
+
+                             <button class="submit-btn form-control" id="form-submit">Login</button>
+                        </form>
+                   </div>
+              </div>
+
+         </div>
+    </div>
+</section>
+
+
+{% endblock contents %}

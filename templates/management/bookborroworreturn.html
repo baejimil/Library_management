@@ -1,0 +1,95 @@
+{% extends 'layouts.html' %}
+{% block contents %}
+<style>
+    .booknamebar{
+        border:solid rgba(44, 44, 44, 0.308) 2px;
+        border-radius:9px;
+        width:320px;
+        height:60px;
+        text-align:center;
+        color:black;
+        padding:10px;
+        margin-top:20px;
+        font-size:20px;      
+    }
+
+    .bookcodebar{
+        border:solid rgba(44, 44, 44, 0.308) 2px;
+        border-radius:9px;
+        width:320px;
+        height:60px;
+        text-align:center;
+        color:black;
+        padding:10px;
+        margin-top:20px;
+        font-size:20px;      
+    }
+
+
+    input:hover{
+        background-color:rgba(44, 44, 44, 0.308);
+    }
+    input:focus::-webkit-input-placeholder{
+        color:transparent;
+           
+    }
+    input:focus{
+        outline:none;
+    }
+    .borrow_button{
+        background-color:transparent;
+        border-color:white;
+        width:300px;
+        height:50px;
+        border-radius:10px;
+        color:black;
+        margin-top:70px;
+        position:absolute;
+        left:50%;
+        margin-left:-142px;
+    }
+    .return_button{
+        background-color:transparent;
+        border-color:white;
+        width:300px;
+        height:50px;
+        border-radius:10px;
+        color:black;
+        margin-top:60px;
+        position:absolute;
+        left:50%;
+        margin-left:-142px;
+    }
+
+
+    button:hover{
+        background-color:rgb(41 202 142);
+        color:white;
+    }
+    button:focus{
+        outline:none;
+    }
+   
+</style>
+<section>
+    <form method = 'POST'>
+        <div style = "padding:50px 0px 0px 530px;font-size:28px">   
+            Input Username 
+            <input type ="text" class = 'bookcodebar' name='bookborroworreturnname' placeholder="Input Code" style="margin-left:70px">
+        </div>  
+        <div style = "padding:50px 0px 0px 530px;font-size:28px">   
+            Input Book code   
+            <input type ="text" class = 'bookcodebar' name='bookborroworreturncode' placeholder="Input Code" style="margin-left:70px">
+        </div>  
+        <div style="margin-bottom:100px;">
+            
+            <button class='borrow_button' id = 'form-submit' formaction="/borrowing">Borrow Book</button>
+
+            <!-- <button class='borrow_button' id = 'form-submit' onclick = "location.href = '/bookborroworreturn' ">Borrow Book</button> -->
+        </div>
+        <div>
+            <button class='return_button' id = 'form-submit' formaction = "/returning">Return Book</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layouts.html" %}
+{% block contents %}
+<style>
+    .searchbar{
+        border:solid rgba(44, 44, 44, 0.308) 2px;
+        border-radius:9px;
+        width:500px;
+        height:60px;
+        text-align:center;
+        color:black;
+        padding:10px;
+        margin-top:20px;
+        font-size:20px;
+        
+    }
+    input:hover{
+        background-color:rgba(44, 44, 44, 0.308);
+    }
+    input:focus::-webkit-input-placeholder{
+        color:transparent;
+           
+    }
+    input:focus{
+        outline:none;
+    }
+    .search_button{
+        background-color:transparent;
+        border-color:white;
+        width:100px;
+        height:50px;
+        border-radius:10px;
+        color:black;
+    }
+    button:hover{
+        background-color:rgb(41 202 142);
+        color:white;
+    }
+    button:focus{
+        outline:none;
+    }
+   
+</style>
+<section>
+    <div style = "text-align:center;padding-top:50px;">   
+        <span style="font-size:45px">What's the name of the book?</span>
+    </div>
+    <br><br>
+    <div style = "text-align:center;">
+        <form action="/booklist" method = 'GET'>
+            <input type ="text" class = 'searchbar' name='bookname' placeholder="Input book name">
+            <br><br><br><br>
+            <p>
+                <button class='search_button' id = 'form-submit'>Search</button>
+            </p>
+        </form>
+    </div>
+</section>
+
+
+{% endblock contents %}

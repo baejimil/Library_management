@@ -1,0 +1,28 @@
+{% extends "layouts.html" %}
+{% block contents %}
+<section id="about" style="background-image:url(../static/images/library_4.jpg)">
+    <div class="container">
+         <div class="row">
+
+
+              <div class="col-md-offset-4 col-md-6 col-sm-12">
+                   <div class="entry-form">
+                        <form action="/register" method="POST" onsubmit="return confirm('Do you really want to Sign Up?')">
+                             <h2>Sign Up</h2>
+                             <input type="text" name="username" class="form-control" placeholder="Your username" required="">
+
+                             <input type="email" name="email" class="form-control" placeholder="Your email address" required="">
+
+                             <input type="password" name="password" class="form-control" placeholder="Your password" required="">
+
+                             <button class="submit-btn form-control" id="form-submit">Sign up</button>
+                        </form>
+                   </div>
+              </div>
+
+         </div>
+    </div>
+</section>
+
+
+{% endblock contents %}

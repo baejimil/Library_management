@@ -1,0 +1,63 @@
+
+<br><br><br>
+{% extends 'layouts.html' %}
+
+{% block contents %}
+<style>
+  h1{
+      text-align:center;
+      padding-bottom:40px;
+    }
+
+    .table_booklist{
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        width:60%;
+        height:300px;
+        border:black 1px solid
+    }
+    .thead_booklist{
+        text-align:center;
+        background-color:black;
+        color:white;
+        border:black 1px solid
+    }
+    .tr_booklist{
+        text-align:center;
+        width:65%;
+        height:80px;
+    }
+    th{
+        text-align:center;
+        border:black 1px solid;
+        
+    }
+    td{
+        border:black 1px solid;
+    }
+</style>
+
+<h1>List of My Books</h1>
+<br>
+<table class="table_booklist">
+    <thead class="thead_booklist">
+      <tr class = "tr_booklist">
+        <th scope="col" style = "border:white 1px solid;width:300px;">Bookname</th>
+        <th scope="col" style = "border:white 1px solid;width:300px;">Bookcode</th>
+        <th scope="col" style = "border:white 1px solid;border-right-color:black;width:300px;">State</th>
+      </tr>
+    </thead>
+    <tbody class = "table_booklist">
+    {% for i in rentalbooks %} 
+      <tr>
+        <td>{{i[0]}}</td>
+        <td>{{i[1]}}</td>
+        <td>대여중</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock contents %}
