@@ -11,7 +11,7 @@ ENV PYTHONUNBUFFERED=0
 # ==============================================================================
 # 파일 복사
 RUN mkdir -p /src/Library_management
-ADD book_rental_manager /src/Library_management
+ADD Library_management /src/Library_management
 ADD setup.py /src
 WORKDIR /src
 
